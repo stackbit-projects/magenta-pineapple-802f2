@@ -44,7 +44,7 @@ export default class Post extends React.Component {
                         <div key={index}>
                             <h3>{name}</h3>
                             <p>{rating}</p>
-                            <p>{reviews}</p>
+                            <p>{review}</p>
                         </div>
                     ))}
                 </div>
