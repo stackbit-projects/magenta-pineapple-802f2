@@ -38,7 +38,16 @@ export default class Post extends React.Component {
                 </div>
             </section>
 
-            TESTING
+            <div>
+                    <h2>Reviews</h2>
+                    {_.get(props, 'pageContext.frontmatter.review', null) && _.get(props, 'pageContext.frontmatter.review', null).map(({ name, rating, message }, index) => (
+                        <div key={index}>
+                            <h3>{name}</h3>
+                            <p>{rating}</p>
+                            <p>{message}</p>
+                        </div>
+                    ))}
+                </div>
             </Layout>
         );
     }
